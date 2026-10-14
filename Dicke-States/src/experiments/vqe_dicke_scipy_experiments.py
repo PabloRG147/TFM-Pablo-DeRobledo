@@ -15,6 +15,7 @@ from qiskit.primitives import BackendEstimatorV2
 from qiskit.transpiler import generate_preset_pass_manager
 from qiskit_aer import AerSimulator
 from tqdm import tqdm
+from pathlib import Path
 
 from utils import objective_scipy
 
@@ -65,15 +66,15 @@ SCENARIO = args.scenario
 DEVICE = args.device
 METHOD = args.method
 try:
-    initial_points = np.load(f"{SCENARIO}/initial_points.npy")
+    initial_points = np.load(f"{SCENARIO}/initial_points.npy")[:1]
     NUM_EXPERIMENTS = int(initial_points.shape[0])
 except Exception as _e:
     print(f"{_e}")
     raise
 OPTIMIZER = args.optimizer
 
-N_SHOTS_LIST = [2**i for i in range(13)]
-MAXITER_LIST = [10**i for i in range(4)]
+N_SHOTS_LIST = [128]
+MAXITER_LIST = [20]
 
 simulator = AerSimulator(method=METHOD, device=DEVICE)
 pm = generate_preset_pass_manager(backend=simulator, optimization_level=0)
@@ -113,17 +114,34 @@ for n_shots in tqdm(N_SHOTS_LIST, desc="num_shots"):
     )
     for maxiter in tqdm(MAXITER_LIST, desc="maxiter", leave=False):
         for i in tqdm(range(NUM_EXPERIMENTS), desc="experiments", leave=False):
+        
+            history = []
+            
             ti = time.time()
             result_scipy = scipy.optimize.minimize(
                 fun=objective_scipy,
                 x0=initial_points[i],
                 method=OPTIMIZER,
                 bounds=bounds,
-                args=(estimator, qc, ising, offset),
+                args=(estimator, qc, ising, offset, history),
                 options=dict(maxiter=maxiter),
             )
             tf = time.time()
+            
+            history_dir = Path(SCENARIO) / "results" / "histories"
+            history_dir.mkdir(parents=True, exist_ok=True)
+            
+            history_df = pd.DataFrame([
+                {
+                    "evaluation": j,
+                    "energy": float(np.asarray(energy).item()),
+                    "parameters": {str(k): float(v) for k, v in params.items()
+                    },
+                }
+                for j, (energy, params) in enumerate(history, start=1)
+            ])
 
+            history_df.to_pickle(history_dir/ f"scipy_{OPTIMIZER}_shots{n_shots}_budget{maxiter}_run{i}.pkl")
             ansatz = qc.copy()
             params_mapper = {
                 param: value for param, value in zip(ansatz.parameters, result_scipy.x)

@@ -15,8 +15,11 @@ from qiskit.primitives import BackendEstimatorV2
 from qiskit.transpiler import generate_preset_pass_manager
 from qiskit_aer import AerSimulator
 from tqdm import tqdm
+from pathlib import Path
 
 from utils import ObjectiveOptuna
+
+history = []
 
 optuna.logging.set_verbosity(optuna.logging.WARNING)
 
@@ -105,6 +108,7 @@ for n_shots in tqdm(N_SHOTS_LIST, desc="num_shots"):
                 ising=ising,
                 offset=offset,
                 bounds=bounds,
+                callback=history,
             )
             if OPTIMIZER == "CMA-ES":
                 x0_dict = {
@@ -119,6 +123,20 @@ for n_shots in tqdm(N_SHOTS_LIST, desc="num_shots"):
             ti = time.time()
             study.optimize(objective_optuna, n_trials=maxiter)
             tf = time.time()
+            
+            history_dir = Path(SCENARIO) / "results" / "histories"
+            history_dir.mkdir(parents=True, exist_ok=True)
+
+            history_df = pd.DataFrame([
+                {
+                    "evaluation": j,
+                    "energy": float(np.asarray(energy).item()),
+                    "parameters": params
+                }
+                for j, (energy, params) in enumerate(history, start=1)
+            ])
+
+            history_df.to_pickle(history_dir /f"{OPTIMIZER}_shots{n_shots}_"f"budget{maxiter}_run{i}.pkl")
 
             ansatz = qc.copy()
             params_mapper = {
