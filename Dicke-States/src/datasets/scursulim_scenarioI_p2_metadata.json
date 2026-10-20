@@ -1,0 +1,41 @@
+{
+  "type": "escenario_I_10_acciones_nueva_instancia_no_numeros_paper",
+  "source": "Yahoo Finance via yfinance; cinco precios heredados del CSV multiclase",
+  "yfinance_version": "1.7.0",
+  "existing_stocks_from_multiclass": [
+    "AAPL",
+    "MSFT",
+    "AMZN",
+    "JPM",
+    "JNJ"
+  ],
+  "extra_stocks_downloaded": [
+    "GOOGL",
+    "NVDA",
+    "XOM",
+    "PG",
+    "WMT"
+  ],
+  "stocks_in_csv": [
+    "AAPL",
+    "MSFT",
+    "AMZN",
+    "JPM",
+    "JNJ",
+    "GOOGL",
+    "NVDA",
+    "XOM",
+    "PG",
+    "WMT"
+  ],
+  "auto_adjust": true,
+  "start_inclusive": "2024-01-02",
+  "end_inclusive": "2025-01-02",
+  "common_price_rows": 253,
+  "return_rows": 252,
+  "calendar_matches_multiclass": true,
+  "missing_filling": "ninguno",
+  "multiclass_prices_path": "/home/pablo/Documentos/TFM/TFM-Pablo-DeRobledo/Dicke-States/src/datasets/scursulim_multiclase_p2_prices.csv",
+  "multiclass_prices_sha256": "519f4bc3e9567508195e2d02bcd29a28829b41b46d2b405769de940eb7ed3925",
+  "scenarioI_prices_sha256": "8c553e3cc641f78aabca57e3975cf4f9580bba91d154a37902c2fa921f5b82ae"
+}

@@ -1,0 +1,143 @@
+{
+  "scenario": "II",
+  "note": "REPRODUCCION METODOLOGICA - nueva instancia, NO coincide con la numerica del articulo",
+  "groups_are_artificial": true,
+  "financial_diversification_is_real": false,
+  "source_dataset": "/home/pablo/Documentos/TFM/TFM-Pablo-DeRobledo/Dicke-States/src/datasets/sp500_assets_close_price.csv",
+  "source_sha256": "5da0cb11e02e3054e475e4fdaafb5aa2c93571be27b7d578d35d096e1e01ceb8",
+  "class_map_file": null,
+  "first_return_index": "2025-05-06",
+  "last_return_index": "2026-05-01",
+  "class_names": [
+    "grupo_artificial_1",
+    "grupo_artificial_2",
+    "grupo_artificial_3",
+    "grupo_artificial_4",
+    "grupo_artificial_5"
+  ],
+  "assets_by_class": {
+    "grupo_artificial_1": [
+      "asset_327",
+      "asset_179",
+      "asset_94",
+      "asset_379",
+      "asset_88"
+    ],
+    "grupo_artificial_2": [
+      "asset_374",
+      "asset_303",
+      "asset_400",
+      "asset_361",
+      "asset_61"
+    ],
+    "grupo_artificial_3": [
+      "asset_40",
+      "asset_204",
+      "asset_248",
+      "asset_348",
+      "asset_41"
+    ],
+    "grupo_artificial_4": [
+      "asset_341",
+      "asset_216",
+      "asset_358",
+      "asset_201",
+      "asset_241"
+    ],
+    "grupo_artificial_5": [
+      "asset_449",
+      "asset_461",
+      "asset_403",
+      "asset_44",
+      "asset_245"
+    ]
+  },
+  "assets_in_qubit_order_q0_to_q24": [
+    "asset_327",
+    "asset_179",
+    "asset_94",
+    "asset_379",
+    "asset_88",
+    "asset_374",
+    "asset_303",
+    "asset_400",
+    "asset_361",
+    "asset_61",
+    "asset_40",
+    "asset_204",
+    "asset_248",
+    "asset_348",
+    "asset_41",
+    "asset_341",
+    "asset_216",
+    "asset_358",
+    "asset_201",
+    "asset_241",
+    "asset_449",
+    "asset_461",
+    "asset_403",
+    "asset_44",
+    "asset_245"
+  ],
+  "qubit_layout": {
+    "grupo_artificial_1": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "grupo_artificial_2": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "grupo_artificial_3": [
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "grupo_artificial_4": [
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "grupo_artificial_5": [
+      20,
+      21,
+      22,
+      23,
+      24
+    ]
+  },
+  "selected_per_class": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "n_assets": 25,
+  "n_classes": 5,
+  "n_selected": 5,
+  "n_parameters": 20,
+  "n_feasible": 3125,
+  "q": 0.5,
+  "risk_free": 0.0375,
+  "annualization_mean": 252,
+  "annualization_covariance": 252,
+  "n_experiments": 100,
+  "seed": 42,
+  "optimal_obj_value": -1.7470961479279121,
+  "target": "0001010000001000001010000",
+  "number_of_tied_optima": 1,
+  "sampled_ising_error": 3.1086244689504383e-15,
+  "max_local_infeasible_p": 0.0,
+  "paper_classical_optimum_FOR_REFERENCE_ONLY": -1.474237
+}

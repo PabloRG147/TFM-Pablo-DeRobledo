@@ -1,0 +1,143 @@
+{
+  "scenario": "II",
+  "note": "REPRODUCCION METODOLOGICA - nueva instancia, NO coincide con la numerica del articulo",
+  "groups_are_artificial": false,
+  "financial_diversification_is_real": true,
+  "source_dataset": "/home/pablo/Documentos/TFM/TFM-Pablo-DeRobledo/Dicke-States/src/datasets/scursulim_multiclase_p2_prices.csv",
+  "source_sha256": "519f4bc3e9567508195e2d02bcd29a28829b41b46d2b405769de940eb7ed3925",
+  "class_map_file": "/home/pablo/Documentos/TFM/TFM-Pablo-DeRobledo/Dicke-States/src/datasets/scursulim_multiclase_p2_classes.csv",
+  "first_return_index": "2024-01-03",
+  "last_return_index": "2025-01-02",
+  "class_names": [
+    "01_bonos_etf",
+    "02_reits",
+    "03_criptomonedas",
+    "04_materias_primas_etf",
+    "05_acciones"
+  ],
+  "assets_by_class": {
+    "01_bonos_etf": [
+      "SHY",
+      "BND",
+      "AGG",
+      "TLT",
+      "IEF"
+    ],
+    "02_reits": [
+      "PLD",
+      "O",
+      "AMT",
+      "EQIX",
+      "SPG"
+    ],
+    "03_criptomonedas": [
+      "LTC-USD",
+      "ADA-USD",
+      "BTC-USD",
+      "ETH-USD",
+      "SOL-USD"
+    ],
+    "04_materias_primas_etf": [
+      "USO",
+      "GLD",
+      "DBA",
+      "SLV",
+      "DBC"
+    ],
+    "05_acciones": [
+      "AMZN",
+      "MSFT",
+      "AAPL",
+      "JPM",
+      "JNJ"
+    ]
+  },
+  "assets_in_qubit_order_q0_to_q24": [
+    "SHY",
+    "BND",
+    "AGG",
+    "TLT",
+    "IEF",
+    "PLD",
+    "O",
+    "AMT",
+    "EQIX",
+    "SPG",
+    "LTC-USD",
+    "ADA-USD",
+    "BTC-USD",
+    "ETH-USD",
+    "SOL-USD",
+    "USO",
+    "GLD",
+    "DBA",
+    "SLV",
+    "DBC",
+    "AMZN",
+    "MSFT",
+    "AAPL",
+    "JPM",
+    "JNJ"
+  ],
+  "qubit_layout": {
+    "01_bonos_etf": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "02_reits": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "03_criptomonedas": [
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "04_materias_primas_etf": [
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "05_acciones": [
+      20,
+      21,
+      22,
+      23,
+      24
+    ]
+  },
+  "selected_per_class": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "n_assets": 25,
+  "n_classes": 5,
+  "n_selected": 5,
+  "n_parameters": 20,
+  "n_feasible": 3125,
+  "q": 0.5,
+  "risk_free": 0.0375,
+  "annualization_mean": 252,
+  "annualization_covariance": 252,
+  "n_experiments": 100,
+  "seed": 42,
+  "optimal_obj_value": -0.6305673618829709,
+  "target": "0000100100001001000000001",
+  "number_of_tied_optima": 1,
+  "sampled_ising_error": 1.1657341758564144e-15,
+  "max_local_infeasible_p": 0.0,
+  "paper_classical_optimum_FOR_REFERENCE_ONLY": -1.474237
+}

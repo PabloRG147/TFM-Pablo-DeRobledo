@@ -1,0 +1,3 @@
+comparison,metric,a,b,n_paired,mean_delta_a_minus_b,median_delta_a_minus_b,ci95_boot_low,ci95_boot_high,a_lower_count,b_lower_count,ties,sign_test_p_two_sided
+4096 shots: COBYLA - CMA-ES,exact_energy,COBYLA,CMA-ES,100,0.20405006475276227,0.24002754035934648,0.1718276352740498,0.23719103240667416,6,94,0,2.005959521923613e-21
+4096 shots: COBYLA - CMA-ES,p_target,COBYLA,CMA-ES,100,-0.5331088772743653,-0.6402769944172424,-0.6047794206525651,-0.4595180358341036,97,3,0,2.630866896130179e-25

@@ -1,0 +1,30 @@
+{
+  "note": "Reproduccion metodologica, no numerica exacta, del escenario I (febrero de 2026)",
+  "source_dataset": "/home/pablo/Documentos/TFM/TFM-Pablo-DeRobledo/Dicke-States/src/datasets/sp500_assets_close_price.csv",
+  "source_sha256": "5da0cb11e02e3054e475e4fdaafb5aa2c93571be27b7d578d35d096e1e01ceb8",
+  "first_index": "2025-05-06",
+  "last_index": "2026-05-01",
+  "assets": [
+    "asset_41",
+    "asset_369",
+    "asset_42",
+    "asset_313",
+    "asset_210",
+    "asset_208",
+    "asset_337",
+    "asset_45",
+    "asset_97",
+    "asset_413"
+  ],
+  "n_assets": 10,
+  "n_selected": 4,
+  "q": 0.5,
+  "risk_free": 0.0375,
+  "annualization_mean": 252,
+  "annualization_covariance": 252,
+  "seed": 42,
+  "n_experiments": 2,
+  "optimal_obj_value": -1.0221318190852144,
+  "target": "1000101100",
+  "max_ising_cost_error": 6.661338147750939e-16
+}

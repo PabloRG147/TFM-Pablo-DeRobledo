@@ -1,0 +1,89 @@
+{
+  "dataset_type": "instancia_nueva_reproduccion_metodologica_NO_activos_originales",
+  "paper_period": "2",
+  "requested_start_inclusive": "2024-01-02",
+  "requested_end_inclusive": "2025-01-02",
+  "actual_first_date": "2024-01-02",
+  "actual_last_date": "2025-01-02",
+  "rows_before_intersection": 367,
+  "rows_after_intersection": 253,
+  "missing_by_ticker_before_intersection": {
+    "AGG": 114,
+    "BND": 114,
+    "IEF": 114,
+    "TLT": 114,
+    "SHY": 114,
+    "PLD": 114,
+    "O": 114,
+    "AMT": 114,
+    "SPG": 114,
+    "EQIX": 114,
+    "BTC-USD": 0,
+    "ETH-USD": 0,
+    "SOL-USD": 0,
+    "ADA-USD": 0,
+    "LTC-USD": 0,
+    "GLD": 114,
+    "SLV": 114,
+    "DBC": 114,
+    "DBA": 114,
+    "USO": 114,
+    "AAPL": 114,
+    "MSFT": 114,
+    "AMZN": 114,
+    "JPM": 114,
+    "JNJ": 114
+  },
+  "source": "Yahoo Finance via yfinance",
+  "yfinance_version": "1.7.0",
+  "auto_adjust": true,
+  "price_column": "Close ajustado",
+  "alignment": "interseccion_de_fechas_sin_relleno_ni_interpolacion",
+  "note": "ETFs usados como proxies de bonos y materias primas. Cinco clases definidas por nosotros; no identificadas en el paper.",
+  "classes": {
+    "01_bonos_etf": [
+      "AGG",
+      "BND",
+      "IEF",
+      "TLT",
+      "SHY"
+    ],
+    "02_reits": [
+      "PLD",
+      "O",
+      "AMT",
+      "SPG",
+      "EQIX"
+    ],
+    "03_criptomonedas": [
+      "BTC-USD",
+      "ETH-USD",
+      "SOL-USD",
+      "ADA-USD",
+      "LTC-USD"
+    ],
+    "04_materias_primas_etf": [
+      "GLD",
+      "SLV",
+      "DBC",
+      "DBA",
+      "USO"
+    ],
+    "05_acciones": [
+      "AAPL",
+      "MSFT",
+      "AMZN",
+      "JPM",
+      "JNJ"
+    ]
+  },
+  "scenario_III_class_order_and_k": {
+    "01_bonos_etf": 2,
+    "02_reits": 2,
+    "03_criptomonedas": 1,
+    "04_materias_primas_etf": 1,
+    "05_acciones": 3
+  },
+  "prices_sha256": "519f4bc3e9567508195e2d02bcd29a28829b41b46d2b405769de940eb7ed3925",
+  "classes_sha256": "c6b48576880aadfd570770a44257223acaf9082482ca55aa0c9012e0b3431821"
+}

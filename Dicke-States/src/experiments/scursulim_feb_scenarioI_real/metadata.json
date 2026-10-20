@@ -1,0 +1,30 @@
+{
+  "note": "Reproduccion metodologica, no numerica exacta, del escenario I (febrero de 2026)",
+  "source_dataset": "/home/pablo/Documentos/TFM/TFM-Pablo-DeRobledo/Dicke-States/src/datasets/scursulim_scenarioI_p2_prices.csv",
+  "source_sha256": "8c553e3cc641f78aabca57e3975cf4f9580bba91d154a37902c2fa921f5b82ae",
+  "first_index": "2024-01-03",
+  "last_index": "2025-01-02",
+  "assets": [
+    "AMZN",
+    "WMT",
+    "MSFT",
+    "NVDA",
+    "JPM",
+    "PG",
+    "GOOGL",
+    "XOM",
+    "JNJ",
+    "AAPL"
+  ],
+  "n_assets": 10,
+  "n_selected": 4,
+  "q": 0.5,
+  "risk_free": 0.0375,
+  "annualization_mean": 252,
+  "annualization_covariance": 252,
+  "seed": 42,
+  "n_experiments": 10,
+  "optimal_obj_value": -0.9271558165366,
+  "target": "1000011010",
+  "max_ising_cost_error": 8.881784197001252e-16
+}
